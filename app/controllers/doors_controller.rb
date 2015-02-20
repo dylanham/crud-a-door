@@ -1,5 +1,6 @@
 class DoorsController < ApplicationController
   before_action :set_door, only: [:show, :update, :edit, :destroy]
+  skip_before_action :verify_authenticity_token
   def index
     @doors = Door.all
   end

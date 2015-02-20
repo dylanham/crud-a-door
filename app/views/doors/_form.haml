@@ -1,8 +1,7 @@
-= form_for @door do |f|
-  = f.label :size
-  = f.text_field :size
+%form{class: 'new_door',action: '/doors',method: 'post'}
+  %label{for: 'door_size'}Size
+  %input{type: 'text',name: 'door[size]'}
   .div
-  = f.label :color
-  = f.text_field :color
-  .div
-  = f.submit
+    %label{for:'door_color'}Color
+    %input{type: 'text',name: 'door[color]'}
+  %input{type: 'submit',name: 'commit', value: 'submit'}
